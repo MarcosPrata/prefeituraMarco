@@ -1,0 +1,12 @@
+{
+  "name": "prefeituraMarco",
+  "displayName": "prefeituraMarco",
+  "expo": {
+    "name": "prefeituraMarco",
+    "slug": "prefeituraMarco",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
