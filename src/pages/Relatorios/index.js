@@ -9,7 +9,7 @@ export default function Dashboard() {
     const navigation = useNavigation();
     const route = useRoute();
 
-    navigation.navigate('Login', { incident:'' });
+    //navigation.navigate('Login', { incident:'' });
 
     function openDrawer() {
         navigation.openDrawer();

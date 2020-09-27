@@ -20,7 +20,7 @@ export default function Incidents() {
 
     const navigation = useNavigation();
 
-    function navigateToDetail() {
+    function navigateToHome() {
         navigation.navigate('DrawerScreen', { 'incident':1 });
     }
 
@@ -80,7 +80,7 @@ export default function Incidents() {
                     <Button
                         title="Entrar"
                         buttonStyle={styles.button}
-                        onPress={() => { navigateToDetail() }}
+                        onPress={() => { navigateToHome() }}
                     />
 
                     <Image style={{ marginTop: 32 }} source={logoPrefeitura} />
