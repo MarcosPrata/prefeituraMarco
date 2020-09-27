@@ -9,6 +9,8 @@ export default function Dashboard() {
     const navigation = useNavigation();
     const route = useRoute();
 
+    navigation.navigate('Login', { incident:'' });
+
     function openDrawer() {
         navigation.openDrawer();
     }
@@ -20,7 +22,7 @@ export default function Dashboard() {
                     <TouchableOpacity onPress={openDrawer}>
                         <Feather name='menu' size={28} color='#fff' />
                     </TouchableOpacity>
-                    <Text style={styles.headerText}>Dashboard</Text>
+                    <Text style={styles.headerText}>Relatórios</Text>
                 </View>
             </View>
         </View>

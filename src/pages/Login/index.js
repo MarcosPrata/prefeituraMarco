@@ -21,7 +21,7 @@ export default function Incidents() {
     const navigation = useNavigation();
 
     function navigateToDetail() {
-        navigation.navigate('Dashboard', { 'incident':1 });
+        navigation.navigate('DrawerScreen', { 'incident':1 });
     }
 
     async function loadIncidents() {
