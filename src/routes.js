@@ -8,7 +8,10 @@ import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerI
 
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Cadastros from './pages/Cadastros';
+import Acompanhamentos from './pages/Acompanhamentos';
 import Relatorios from './pages/Relatorios';
+import Usuarios from './pages/Usuarios';
 
 const AppStack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -72,7 +75,7 @@ export default function Routes() {
                 />
                 <Drawer.Screen
                     name="Cadastros"
-                    component={Dashboard}
+                    component={Cadastros}
                     options={{
                         drawerIcon: () => (
                             <MaterialIcons
@@ -86,7 +89,7 @@ export default function Routes() {
                 />
                 <Drawer.Screen
                     name="Acompanhamentos"
-                    component={Dashboard}
+                    component={Acompanhamentos}
                     options={{
                         drawerIcon: () => (
                             <MaterialIcons
@@ -114,7 +117,7 @@ export default function Routes() {
                 />
                 <Drawer.Screen
                     name="Usuários"
-                    component={Relatorios}
+                    component={Usuarios}
                     options={{
                         drawerIcon: () => (
                             <MaterialIcons
