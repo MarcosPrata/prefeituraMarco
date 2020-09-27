@@ -36,7 +36,7 @@ function CustomDrawerContent(props) {
                 title='Sair'
                 titleStyle={{ color: '#103d24', fontFamily: 'sans-serif-condensed' }}
                 buttonStyle={{ backgroundColor: '#fafafa', margin: 32 }}
-                onPress={() => { }}
+                onPress={() => { props.navigation.navigate('Login');}}
             />
 
         </DrawerContentScrollView>
