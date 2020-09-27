@@ -32,20 +32,17 @@ function CustomDrawerContent(props) {
             <Button
                 title='Sair'
                 titleStyle={{ color: '#103d24', fontFamily: 'sans-serif-condensed' }}
-                buttonStyle={{ backgroundColor: '#fafafa', margin:32}}
-                onPress={() => { console.log(props) }}
+                buttonStyle={{ backgroundColor: '#fafafa', margin: 32 }}
+                onPress={() => { }}
             />
 
         </DrawerContentScrollView>
     );
 }
 
-
-
-
 export default function Routes() {
 
-    function DrawerScreen() {
+    function AdminScreen() {
         return (
             <Drawer.Navigator
                 drawerContent={CustomDrawerContent}
@@ -134,11 +131,59 @@ export default function Routes() {
         );
     }
 
+    function UserScreen() {
+        return (
+            <Drawer.Navigator
+                drawerContent={CustomDrawerContent}
+                drawerContentOptions={{
+                    activeTintColor: '#fafafa',
+                    inactiveTintColor: '#fbfbfb',
+                    itemStyle: {},
+                }}
+                drawerStyle={{
+                    backgroundColor: '#103d24',
+                    width: 240,
+                }}
+            >
+                <Drawer.Screen
+                    name="Cadastros"
+                    component={Dashboard}
+                    options={{
+                        drawerIcon: () => (
+                            <MaterialIcons
+                                style={{ marginEnd: 10 }}
+                                name='person'
+                                size={24}
+                                color='#fafafa'
+                            />
+                        )
+                    }}
+                />
+                <Drawer.Screen
+                    name="Acompanhamentos"
+                    component={Dashboard}
+                    options={{
+                        drawerIcon: () => (
+                            <MaterialIcons
+                                style={{ marginEnd: 10 }}
+                                name='content-paste'
+                                size={24}
+                                color='#fafafa'
+                            />
+                        )
+                    }}
+                />
+            </Drawer.Navigator>
+
+        );
+    }
+
     return (
         <NavigationContainer>
             <AppStack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="Login" component={Login} />
-                <AppStack.Screen name="DrawerScreen" component={DrawerScreen} />
+                <AppStack.Screen name="AdminScreen" component={AdminScreen} />
+                <AppStack.Screen name="UserScreen" component={UserScreen} />
             </AppStack.Navigator>
         </NavigationContainer>
     );
